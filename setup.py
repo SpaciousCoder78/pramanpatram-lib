@@ -14,9 +14,9 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 # This call to setup() does all the work
 setup(
-    name="beamxs",
-    version="1.1.1",
-    description="Python Library for Structural Beam Analysis",
+    name="pramanpatram",
+    version="1.0.0",
+    description="Python Library for Generating Event Certificates",
     long_description="""A simple Python library for Structural Beam Analysis developed by students of Kakatiya Institute of Technology and Science for Civil Engineering Applications
                     Python Library for Beam Analysis for Civil Engineering
 
@@ -31,14 +31,14 @@ Developed by Aryan Karamtoth from Information Technology Department at Kakatiya 
 ## Installation
 
 ```
-pip install beamxs
+pip install pramanpatram
 ```
 ## Getting Started
 
 Import the package
 
 ```py
-import beamxs as bm
+import pramanpatram as patra
 ```
 Read the documentation and apply the required method for your purpose
 
@@ -180,7 +180,7 @@ print(pinpos)
 
     ,
     long_description_content_type="text/markdown",
-    url="https://github.com/SpaciousCoder78/beam-xs",
+    url="https://github.com/SpaciousCoder78/pramanpatram-lib",
     author="Aryan Karamtoth",
     author_email="aryankmmiv@outlook.com",
     license="MIT",
@@ -197,7 +197,7 @@ print(pinpos)
         "Programming Language :: Python :: 3.12",
         "Operating System :: OS Independent"
     ],
-    packages=["beamxs"],
+    packages=["pramanpatram"],
     include_package_data=True,
-    install_requires=["numpy", "setuptools"]
+    install_requires=["pandas","PIL","textwrap", "setuptools"]
 )

@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="030cd3f8-5fd7-4eea-9aaf-9d06df55147e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pramanpatram/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pramanpatram/pramanpatram.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readthedocs.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_pramanpatram.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732948701553</updated>
       <workItem from="1732948702649" duration="3104000" />
-      <workItem from="1732981740631" duration="907000" />
+      <workItem from="1732981740631" duration="2674000" />
     </task>
     <servers />
   </component>
