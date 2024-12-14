@@ -85,6 +85,7 @@ Run the program to find your certificates in the path you mentioned.
 
 ### Available Methods
 - `generate_certificates(self, csv_path, sample_path, text_coords_x, text_coords_y, text_size, r_value, g_value, b_value, text_width, certificate_text, certificate_path)`
+
   Takes 12 inputs and generates the certificates in the specified path
 
   Example:
