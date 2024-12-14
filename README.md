@@ -5,6 +5,10 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
+![PyPI - Version](https://img.shields.io/pypi/v/pramanpatram)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pramanpatram)
+
+
 Python Wrapper Library for Pramanpatram to generate event certificates
 
 ## Supported Features
