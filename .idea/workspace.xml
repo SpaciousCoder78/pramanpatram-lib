@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="030cd3f8-5fd7-4eea-9aaf-9d06df55147e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pramanpatram/pramanpatram.py" beforeDir="false" afterPath="$PROJECT_DIR$/pramanpatram/pramanpatram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_pramanpatram.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_pramanpatram.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +69,7 @@
       <workItem from="1732981740631" duration="5069000" />
       <workItem from="1733567473190" duration="1917000" />
       <workItem from="1734153148612" duration="2178000" />
-      <workItem from="1734155550733" duration="1311000" />
+      <workItem from="1734155550733" duration="1602000" />
     </task>
     <servers />
   </component>
@@ -80,6 +78,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pramanpatram_lib$pramanpatram.coverage" NAME="pramanpatram Coverage Results" MODIFIED="1734156172767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pramanpatram" />
-    <SUITE FILE_PATH="coverage/pramanpatram_lib$test_pramanpatram.coverage" NAME="test_pramanpatram Coverage Results" MODIFIED="1734156832281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/pramanpatram_lib$test_pramanpatram.coverage" NAME="test_pramanpatram Coverage Results" MODIFIED="1734157166742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>
