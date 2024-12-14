@@ -15,166 +15,124 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 # This call to setup() does all the work
 setup(
     name="pramanpatram",
-    version="1.0.0",
+    version="1.0.1",
     description="Python Library for Generating Event Certificates",
-    long_description="""A simple Python library for Structural Beam Analysis developed by students of Kakatiya Institute of Technology and Science for Civil Engineering Applications
-                    Python Library for Beam Analysis for Civil Engineering
-
-Developed by Aryan Karamtoth from Information Technology Department at Kakatiya Institute of Technology and Science
+    long_description="""A Python Library for Generating Event Certificates
 
 ## Supported Features
-
-- Making a beam
-- Calculating Support Reactions of a beam
-- Applying load on a beam
+- Generating event certificates with only attendee names
 
 ## Installation
 
+```sh
+$ pip install pramanpatram
 ```
-pip install pramanpatram
-```
+
 ## Getting Started
 
 Import the package
 
 ```py
-import pramanpatram as patra
+import Pramanpatram
 ```
-Read the documentation and apply the required method for your purpose
+Create `.csv` file containing the Column header as `Attendees` with the Attendee names
+
+Pass the parameters into `patram.generate_certificates()`:
+
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>csv_path</code></td>
+    <td>Path of CSV File</td>
+  </tr>
+    <tr>
+    <td><code>sample_path</code></td>
+    <td>Path of Certificate Template File</td>
+  </tr>
+    <tr>
+    <td><code>text_coords_x</code></td>
+    <td> X Coordinate of the text to be printed</td>
+  </tr>
+  <tr>
+    <td><code>text_coords_y</code></td>
+    <td> Y Coordinate of the text to be printed</td>
+  </tr>
+  <tr>
+    <td><code>text_size</code></td>
+    <td>Size of text to be printed</td>
+  </tr>
+  <tr>
+    <td><code>r_Value</code></td>
+    <td>Red Colour Value (Set to 0 for Black)</td>
+  </tr>
+  <tr>
+    <td><code>g_Value</code></td>
+    <td>Green Colour Value (Set to 0 for Black)</td>
+  </tr>
+  <tr>
+    <td><code>b_Value</code></td>
+    <td>Blue Colour Value (Set to 0 for Black)</td>
+  </tr>
+  <tr>
+    <td><code>text_width</code></td>
+    <td>Width of text</td>
+  </tr>
+  <tr>
+    <td><code>certificate_text</code></td>
+    <td>Text to be printed on the certificate (use {name} to print the name in the position)</td>
+  </tr>
+  <tr>
+    <td><code>certificate_path</code></td>
+    <td>Location to save certificates</td>
+  </tr>
+</table>
+
+Run the program to find your certificates in the path you mentioned.
 
 ## Documentation
 
-### Built-in Methods:
-- `createBeam(len)`:
-Method for creating a beam
+### Available Methods
+- `generate_certificates(self, csv_path, sample_path, text_coords_x, text_coords_y, text_size, r_value, g_value, b_value, text_width, certificate_text, certificate_path)`
 
-    Input:  len  --> Length of Beam
-    Output: beam --> Beam object
-
-Example:
-```py
-beam = bm.createBeam(10)
-print(beam)
-```
-
-- `definePin(pinPos,beam)`:
-
-Method for defining the position of pin support
-
-    Input:  pinPos      --> Pin Support Position
-            beam        --> Beam object
-    Output: pinposition --> Pin Position
-
-Example:
-```py
-pinpos = bm.definePin(2,beam)
-print(pinpos)
-```
-
-- `defineRoller(rollPos,beam)`:
-
-  Method for defining the position of roller support
-
-    Input:  rollPos --> Roller Support Position
-            beam    --> Beam object
-
-    Output: rollposition --> Roller Position
-
-  Example:
-  ```py
-  rollpos = bm.defineRoller(4,beam)
-  print(rollpos)
-  ```
-- `applyPointLoad(loadPos,loadMag,beam)`:
-
-  Method for applying Point Load on the beam
-
-    Input:  loadPos --> Position of Point Load
-            loadMag --> Magnitude of Point Load
-            beam    --> Beam object
-
-    Output: load    --> Applied Load 
-
-  Example:
-  ```py
-  ptload = bm.applyPointLoad(4,60,beam)
-  print(ptload)
-  ```
-
-- `applyUDL(beam,loadPerUnitLength)`:
-
-  Method for applying UDL (Uniformly Distributed Load) on the beam
-
-    Input:  beam              --> Beam object
-            loadPerUnitLength --> Load Per Unit Length
-
-    Output: udl               --> Applied UDL
+  Takes 12 inputs and generates the certificates in the specified path
 
   Example:
 
   ```py
-  udlarray = bm.applyUDL(beam,20)
-  print(udlarray)
+  import os
+  from pramanpatram.pramanpatram import Pramanpatram
+
+  def test_generate_certificate():
+      csv_path = "attendees.csv"
+      sample_path = "sample.jpg"
+      text_coords_x = 110
+      text_coords_y = 120
+      text_size = 20
+      r_value = 0
+      g_value = 0
+      b_value = 0
+      text_width = 40
+      certificate_text = "Thanks {name}"
+      certificate_path = "certificates"
+
+      if not os.path.exists(csv_path):
+          print(f"CSV file not found at path: {csv_path}")
+          return
+
+      if not os.path.exists(certificate_path):
+         os.makedirs(certificate_path)
+         print(f"Created directory for certificates at path: {certificate_path}")
+
+      patram = Pramanpatram()
+      result = patram.generate_certificates(csv_path, sample_path, text_coords_x, text_coords_y, text_size, r_value, g_value, b_value, text_width, certificate_text,       certificate_path)
+      print(result)
+
+  test_generate_certificate()
   ```
-
-- `applyUVL(beam,startLoad,endLoad)`:
-
-  Method for applying UVL (Uniformly Varying Load) on the beam
-
-    Input:  beam       --> Beam object
-            startLoad  --> Start Load
-            endLoad    --> End Load
-
-    Output: uvl        --> Applied UVL
-
-  Example:
-  ```py
-  uvlarray = bm.applyUVL(beam,20,40)
-  print(uvlarray)
-  ```
-- `applyMoment(momentPos, momentMag, beam)`:
-
-  Method for applying Moment on the beam
-
-    Input:  momentPos --> Moment Position
-            momentMag --> Moment Magnitude
-            beam      --> Beam Object
-
-    Output: moments    --> Moment Applied
-
-  Example:
-  ```py
-  appliedmoment = bm.applyMoment(3,20,beam)
-  print(appliedmoment)
-  ```
-- `calcReactionsSSB(loads, pinPos, rollPos, beam)`:
-
-  Method for calculation support reaction of a simply supported beam with various loads
-
-    Input:  loads    --> Dictionary containing load data
-            beam     --> Beam Object
-            pinPos   --> Pin Position
-            rollPos  --> Roller Support Position
-
-    Output: Ra       --> Reaction at pin support
-            Rb       --> Reaction at roller support
-
-  Example:
-
-  ```py
-    loads = [
-    {'type': 'point', 'position': 2, 'magnitude': 50},
-    {'type': 'udl', 'start': 3, 'end': 5, 'magnitude': 20},
-    {'type': 'uvl', 'start': 6, 'end': 8, 'start_magnitude': 10, 'end_magnitude': 30}
-    ]
-    pinPos = 1
-    rollPos = 9
-    Ra, Rb = bm.calcReactionsSSB(loads, pinPos, rollPos, beam)
-    print(Ra)
-    print(Rb)
-  ```
-
-
 
                      """
 
@@ -199,5 +157,5 @@ print(pinpos)
     ],
     packages=["pramanpatram"],
     include_package_data=True,
-    install_requires=["pandas","PIL","textwrap", "setuptools"]
+    install_requires=["pandas","PIL","pillow","textwrap"]
 )

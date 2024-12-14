@@ -2,14 +2,14 @@ import os
 from pramanpatram.pramanpatram import Pramanpatram
 
 def test_generate_certificate():
-    csv_path = "attendees.csv"
-    sample_path = "sample.jpg"
-    text_coords_x = 450
-    text_coords_y = 530
+    csv_path = "attendees.csv" #csv path
+    sample_path = "sample.jpg" #sample path
+    text_coords_x = 110
+    text_coords_y = 120
     text_size = 20
-    r_value = 0
-    g_value = 0
-    b_value = 0
+    r_value = 0 #black
+    g_value = 0 #black
+    b_value = 0 #black
     text_width = 40
     certificate_text = "Thanks {name}"
     certificate_path = "certificates"
