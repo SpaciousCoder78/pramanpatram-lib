@@ -7,7 +7,7 @@
 
 ![PyPI - Version](https://img.shields.io/pypi/v/pramanpatram)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pramanpatram)
-
+[![PyPI Downloads](https://static.pepy.tech/badge/pramanpatram)](https://pepy.tech/projects/pramanpatram)
 
 Python Wrapper Library for Pramanpatram to generate event certificates
 
